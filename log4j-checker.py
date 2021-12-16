@@ -23,7 +23,7 @@ def init():
 
 
 def send_requests(url, payload, proxy):
-
+    proxies = None
     if proxy:
         proxies = {
             'http': 'http://%s' %(proxy),
