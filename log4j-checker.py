@@ -49,7 +49,8 @@ def send_requests(url, payload, proxy):
     }
     try:
         resp = requests.get("%s/?x=%s" %(url, payload), headers=headers, verify=False, proxies=proxies)
-    except:
+    except Exception as e:
+        print(e)
         pass
 
 def check_log4j(url, payloads, proxy):
